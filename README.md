@@ -15,9 +15,6 @@ Intente utilizar un dominio similar al que se planteo para el parcial que permit
 
 El Sistema de Reservas de Vuelos es una solución integral para gestionar reservas de vuelos, incluyendo detalles sobre vuelos, aviones, pasajeros, asientos, aerolíneas, miembros de la tripulación, horarios de vuelos y tickets. Permite a los usuarios reservar vuelos, gestionar la disponibilidad de asientos, rastrear información de pasajeros y manejar operaciones complejas de vuelos.
 
-### APIMOCK SOURCE DATA
-https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
-
 ## Características del API
 
 ### API de Reservas de Vuelos
@@ -60,7 +57,9 @@ Para asegurar la consistencia de los datos y manejar la concurrencia en las rese
 - **Transaction Management**: Asegura la atomicidad de las operaciones usando transacciones. Si una operación dentro de una transacción falla, todas las operaciones se revertirán. Esto se logra utilizando mecanismos de gestión de transacciones proporcionados por el framework o la base de datos. Por ejemplo, en Spring Boot, se puede usar la anotación `@Transactional` para demarcar métodos que deben ejecutarse dentro de una transacción. Si cualquier operación dentro de la transacción falla, se lanza una excepción y todas las operaciones se deshacen.
 
 - **Retry Mechanism**: Implementa lógica de reintento para fallos transitorios. Si una operación falla debido a un conflicto de concurrencia, se puede reintentar después de un breve retraso. Esto se puede implementar utilizando bibliotecas de reintento o escribiendo lógica personalizada. Por ejemplo, se puede capturar la excepción que indica un conflicto de concurrencia y luego esperar un breve período antes de intentar la operación nuevamente. Es importante limitar el número de reintentos para evitar bucles infinitos.
-
+- 
+- **APIMOCK SOURCE DATA**
+https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
 ### Ejemplo de Respuestas de Endpoints
 
 #### Endpoint: /api/flights
