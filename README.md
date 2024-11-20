@@ -1,6 +1,6 @@
 # Practice-parcial-for-all
 Este repositorio fue creado personalmente para que la comisión pueda practicar para el parcial del sábado. 
-Intente utilizar un dominio similar al que se planteo en para el parcial que permita implementar estrategias de validación y así evitar errores de concurrencia.
+Intente utilizar un dominio similar al que se planteo para el parcial que permita implementar estrategias de validación y así evitar errores de concurrencia.
 ```markdown
 # PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
 
@@ -15,6 +15,9 @@ Intente utilizar un dominio similar al que se planteo en para el parcial que per
 
 El Sistema de Reservas de Vuelos es una solución integral para gestionar reservas de vuelos, incluyendo detalles sobre vuelos, aviones, pasajeros, asientos, aerolíneas, miembros de la tripulación, horarios de vuelos y tickets. Permite a los usuarios reservar vuelos, gestionar la disponibilidad de asientos, rastrear información de pasajeros y manejar operaciones complejas de vuelos.
 
+### APIMOCK SOURCE DATA
+https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
+
 ## Características del API
 
 ### API de Reservas de Vuelos
@@ -22,6 +25,7 @@ El Sistema de Reservas de Vuelos es una solución integral para gestionar reserv
 Construir un API de Reservas de Vuelos implica recopilar y procesar datos relacionados con vuelos, aviones, pasajeros, reservas, aerolíneas, miembros de la tripulación, horarios de vuelos y tickets.
 
 #### 1 - Definir los Endpoints del API:
+
 
 Comienza definiendo los endpoints para tu API de Reservas de Vuelos. Podrías tener endpoints como:
 
