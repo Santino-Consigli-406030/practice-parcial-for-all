@@ -1,10 +1,7 @@
 # Practice-parcial-for-all
 Este repositorio fue creado personalmente para que la comisión pueda practicar para el parcial del sábado. 
 Intente utilizar un dominio similar al que se planteo para el parcial que permita implementar estrategias de validación y así evitar errores de concurrencia.
-```markdown
-# PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
 
-```markdown
 # PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
 
 ## Introducción
