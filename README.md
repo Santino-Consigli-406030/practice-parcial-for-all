@@ -228,5 +228,14 @@ Para levantar una base de datos JSON desde la consola con Node.js, puedes usar e
     }
   ]
 }
+Requirements
+The application must be implemented as a microservice using SpringBoot Framework.
+The application must be implemented using Java 17.
+The application must be implemented using Maven.
+The rest clients must be implemented using Rest Template.
+The Rest clients must implement the circuit breaker pattern using Resilience4j.
+The application must be tested using JUnit 5 and Mockito.
+The application must have 100% code coverage.
+The application must be deployed using Docker.
 ```
 ```
