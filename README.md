@@ -205,6 +205,7 @@ Para asegurar la consistencia de los datos y manejar la concurrencia en las rese
     }
   ]
 }
+```
 Requirements
 The application must be implemented as a microservice using SpringBoot Framework.
 The application must be implemented using Java 17.
