@@ -1,8 +1,5 @@
-# Practice-parcial-for-all
-Este repositorio fue creado personalmente para que la comisión pueda practicar para el parcial del sábado. 
-Intente utilizar un dominio similar al que se planteo para el parcial que permita implementar estrategias de validación y así evitar errores de concurrencia.
 
-# PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
+ PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
 
 ## Introducción
 
@@ -12,6 +9,8 @@ Intente utilizar un dominio similar al que se planteo para el parcial que permit
 
 El Sistema de Reservas de Vuelos es una solución integral para gestionar reservas de vuelos, incluyendo detalles sobre vuelos, aviones, pasajeros, asientos, aerolíneas, miembros de la tripulación, horarios de vuelos y tickets. Permite a los usuarios reservar vuelos, gestionar la disponibilidad de asientos, rastrear información de pasajeros y manejar operaciones complejas de vuelos.
 
+### APIMOCK SOURCE DATA
+https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
 ## Características del API
 
 ### API de Reservas de Vuelos
@@ -20,15 +19,14 @@ Construir un API de Reservas de Vuelos implica recopilar y procesar datos relaci
 
 #### 1 - Definir los Endpoints del API:
 
-
-Comienza definiendo los endpoints para tu API de Reservas de Vuelos. Podrías tener endpoints como:
-
+Comienza definiendo los endpoints para tu API de Reservas de Vuelos. 
+ENDPOINTS SOLICITADOS.
 ```http
-/api/flights: Para listar todos los vuelos disponibles.
-/api/flights/{flight_id}: Para recuperar detalles de un vuelo específico.
-/api/bookings: Para crear una nueva reserva.
-/api/bookings/{booking_id}: Para recuperar o actualizar una reserva específica.
-/api/tickets: Para listar todos los tickets.
+/api/flights: Para listar todos los vuelos disponibles. 5P
+/api/flights/{flight_id}: Para recuperar detalles de un vuelo específico. 10P
+/api/bookings: Para crear una nueva reserva. 25P
+/api/bookings/{booking_id}: Para recuperar o actualizar una reserva específica.5P
+/api/tickets: Para listar todos los tickets. 5P
 ```
 
 #### 2 - Recopilar Datos de Vuelos:
@@ -54,9 +52,7 @@ Para asegurar la consistencia de los datos y manejar la concurrencia en las rese
 - **Transaction Management**: Asegura la atomicidad de las operaciones usando transacciones. Si una operación dentro de una transacción falla, todas las operaciones se revertirán. Esto se logra utilizando mecanismos de gestión de transacciones proporcionados por el framework o la base de datos. Por ejemplo, en Spring Boot, se puede usar la anotación `@Transactional` para demarcar métodos que deben ejecutarse dentro de una transacción. Si cualquier operación dentro de la transacción falla, se lanza una excepción y todas las operaciones se deshacen.
 
 - **Retry Mechanism**: Implementa lógica de reintento para fallos transitorios. Si una operación falla debido a un conflicto de concurrencia, se puede reintentar después de un breve retraso. Esto se puede implementar utilizando bibliotecas de reintento o escribiendo lógica personalizada. Por ejemplo, se puede capturar la excepción que indica un conflicto de concurrencia y luego esperar un breve período antes de intentar la operación nuevamente. Es importante limitar el número de reintentos para evitar bucles infinitos.
-  
-- **APIMOCK SOURCE DATA**
-https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
+
 ### Ejemplo de Respuestas de Endpoints
 
 #### Endpoint: /api/flights
@@ -210,14 +206,4 @@ https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-pa
   ]
 }
 ```
-
 ```
-Requirements
-The application must be implemented as a microservice using SpringBoot Framework.
-The application must be implemented using Java 17.
-The application must be implemented using Maven.
-The rest clients must be implemented using Rest Template.
-The Rest clients must implement the circuit breaker pattern using Resilience4j.
-The application must be tested using JUnit 5 and Mockito.
-The application must have 100% code coverage.
-The application must be deployed using Docker.
