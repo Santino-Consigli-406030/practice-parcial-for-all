@@ -217,8 +217,4 @@ The Rest clients must implement the circuit breaker pattern using Resilience4j.
 The application must be tested using JUnit 5 and Mockito.
 The application must have 100% code coverage.
 The application must be deployed using Docker.
-The rest clients must be implemented using Rest Template.
-The Rest clients must implement the circuit breaker pattern using Resilience4j.
-The application must be tested using JUnit 5 and Mockito.
-The application must have 100% code coverage.
-The application must be deployed using Docker.
+
