@@ -1,5 +1,5 @@
 
- PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
+PRACTICA PARCIAL - API DE RESERVAS DE VUELOS
 
 ## Introducción
 
@@ -10,7 +10,8 @@
 El Sistema de Reservas de Vuelos es una solución integral para gestionar reservas de vuelos, incluyendo detalles sobre vuelos, aviones, pasajeros, asientos, aerolíneas, miembros de la tripulación, horarios de vuelos y tickets. Permite a los usuarios reservar vuelos, gestionar la disponibilidad de asientos, rastrear información de pasajeros y manejar operaciones complejas de vuelos.
 
 ### APIMOCK SOURCE DATA
-https://my-json-server.typicode.com/Santino-Consigli-406030/fake-api-practice-parcial-2-LCIV
+http://localhost:3000
+
 ## Características del API
 
 ### API de Reservas de Vuelos
@@ -19,7 +20,7 @@ Construir un API de Reservas de Vuelos implica recopilar y procesar datos relaci
 
 #### 1 - Definir los Endpoints del API:
 
-Comienza definiendo los endpoints para tu API de Reservas de Vuelos. 
+Comienza definiendo los endpoints para tu API de Reservas de Vuelos.
 ENDPOINTS SOLICITADOS.
 ```http
 /api/flights: Para listar todos los vuelos disponibles. 5P
@@ -52,6 +53,28 @@ Para asegurar la consistencia de los datos y manejar la concurrencia en las rese
 - **Transaction Management**: Asegura la atomicidad de las operaciones usando transacciones. Si una operación dentro de una transacción falla, todas las operaciones se revertirán. Esto se logra utilizando mecanismos de gestión de transacciones proporcionados por el framework o la base de datos. Por ejemplo, en Spring Boot, se puede usar la anotación `@Transactional` para demarcar métodos que deben ejecutarse dentro de una transacción. Si cualquier operación dentro de la transacción falla, se lanza una excepción y todas las operaciones se deshacen.
 
 - **Retry Mechanism**: Implementa lógica de reintento para fallos transitorios. Si una operación falla debido a un conflicto de concurrencia, se puede reintentar después de un breve retraso. Esto se puede implementar utilizando bibliotecas de reintento o escribiendo lógica personalizada. Por ejemplo, se puede capturar la excepción que indica un conflicto de concurrencia y luego esperar un breve período antes de intentar la operación nuevamente. Es importante limitar el número de reintentos para evitar bucles infinitos.
+
+### Levantar una base de datos JSON local con Node.js
+
+Para levantar una base de datos JSON desde la consola con Node.js, puedes usar el paquete `json-server`. Aquí tienes los pasos para hacerlo:
+
+1. **Instalar `json-server`**:
+   Abre tu terminal y ejecuta el siguiente comando para instalar `json-server` globalmente:
+   ```sh
+   npm install -g json-server
+
+3. **Levantar el servidor**:
+   En la terminal, navega al directorio donde se encuentra tu archivo `db.json` y ejecuta el siguiente comando:
+   ```sh
+   json-server --watch db.json
+   ```
+
+   Esto levantará un servidor en `http://localhost:3000` que servirá los datos de tu archivo `db.json`.
+
+4. **Acceder a la base de datos**:
+   Puedes acceder a los datos a través de las rutas generadas automáticamente. Por ejemplo:
+    - `http://localhost:3000/flights` para obtener todos los vuelos.
+    - `http://localhost:3000/flights/1` para obtener el vuelo con `flight_id` 1.
 
 ### Ejemplo de Respuestas de Endpoints
 
@@ -206,15 +229,4 @@ Para asegurar la consistencia de los datos y manejar la concurrencia en las rese
   ]
 }
 ```
-
 ```
-Requirements
-The application must be implemented as a microservice using SpringBoot Framework.
-The application must be implemented using Java 17.
-The application must be implemented using Maven.
-The rest clients must be implemented using Rest Template.
-The Rest clients must implement the circuit breaker pattern using Resilience4j.
-The application must be tested using JUnit 5 and Mockito.
-The application must have 100% code coverage.
-The application must be deployed using Docker.
-
